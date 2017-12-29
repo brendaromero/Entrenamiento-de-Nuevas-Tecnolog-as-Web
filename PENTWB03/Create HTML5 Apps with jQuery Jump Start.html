@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Create HTML5 Apps with jQuery Jump Start</title>
+  
+<link rel="stylesheet" href="styles.css" type="text/css"  media="all">
+
+</head>
+
+<header id ="header">
+
+ 
+   <center id="center"> <h1>Curso Create HTML5 Apps with jQuery Jump Start</h1> </center>
+    
+ 
+  <nav>
+  
+    <ul id="contenido">
+	<li><a href="#semantica">Seleccion</a></li>
+	 <li><a href="#selector">Manipulando el DOM</a></li>
+	    <li><a href="#animacion">Eventos</a></li>
+		<li><a href="#javascript">Efectos</a></li>
+		<li><a href="#dom">Ajax </a></li>
+		<li><a href="#avanzado">Librerias</a></li>
+		
+	  
+        </ul>
+  </nav>
+
+</header>
+<body>
+<section>
+<div id= "semantica">
+<center> <h2>Seleccion </h2></center>
+
+<br>
+<p> Tipos de selectores</p>
+
+<h4>$("selector<br>
+$("selector").method();<br>
+$("selector1, selector2, selector N");<br>
+$("element[attr='value'][attr='value2']"); </h4>
+
+<br><br>
+
+<h5>Selectores Básicos</h5>
+<h4> $("*"); <br>
+$("elementName");<br>
+$("#elementId");<br>
+$(".class");<br> </h4>
+<script>
+$(document).ready(function(){
+    $("#intro").css("background-color", "yellow");
+});
+</script>
+
+<h5>Selectores de atributos </h5>
+<h4>
+$( "selector[attr]" );<br>
+$( "selector[attr='value']" );<br> </h4>
+
+
+<hr>
+
+</div>
+
+<div id ="selector">
+<center> <h2>Manipulando el DOM </h2></center>
+<p>Manipular elementos</p>
+
+$("content").appendTo(" selector ");<br>
+$("content").prependTo(" selector ");<br>
+$("selector").append("<li>this is after</li>");<br>
+$("selector").prepend("<li>this is after</li>");<br>
+$("selector").clone().appendTo("selector2");<br>
+
+<p>Modificando Atributos</p>
+$("selector").attr("name","value");<br>
+$("selector").prop("name","value");<br>
+$("selector").removeAttr("name");<br>
+$("selector").removeProp("prop");<br>
+$("selector").attr("name", function(attr) { ... } );<br>
+
+<p>Elementos con estilo CSS</p>
+<h4>
+$("selector").css("style","value");<br>
+$("selector").css({"style":"value","style":"value"});<br>
+$("selector").css("style", function(index, value) { ... } ); </h4>
+
+
+<hr>
+
+</div>
+
+<div id="animacion">
+
+<center> <h2>Eventos </h2></center>
+<h4>
+• .load()<br>
+• .ready()<br>
+• .unload()<br>
+• .change()<br>
+• .focus()<br>
+• .blur()<br>
+• .keydown()<br>
+• .keypress()<br>
+• .click()<br>
+• .dblclick()<br>
+• .hover()<br>
+• .mousedown()<br>
+• .mouseenter()<br>
+• .mouseleave()<br>
+• .mousemove()<br>
+• .mouseout()<br>
+</h4>
+
+<hr>
+</div>
+
+<div id="javascript">
+
+<center> <h2> </h2></center>
+
+
+</div>
+<div id="dom">
+
+<center> <h2> </h2></center>
+
+
+
+</div>
+
+<br>
+<div id="avanzado">
+
+<center> <h2> </h2></center>
+
+
+
+
+<hr>
+</div>
+<script>
+</section>
+<footer id="footer">
+
+<small>Copyright © 2017 - Brenda Gabriela Romero Moreno - BGRM</small>
+
+
+
+</footer>
+</body>
+</html>

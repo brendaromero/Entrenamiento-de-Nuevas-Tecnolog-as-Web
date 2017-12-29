@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Developing in HTML5 with JavaScript and CSS3 Jump Start</title>
+  
+<link rel="stylesheet" href="styles.css" type="text/css"  media="all">
+
+</head>
+
+<header id ="header">
+
+ 
+   <center id="center"> <h1>Curso Developing in HTML5 with JavaScript and CSS3 Jump Start</h1> </center>
+    
+ 
+  <nav>
+  
+    <ul id="contenido">
+	<li><a href="#semantica">Estructura semántica de HTML5</a></li>
+	 <li><a href="#selector">Selectores de CSS3 y propiedades de estilo</a></li>
+	    <li><a href="#animacion">Diseño y animación avanzados</a></li>
+		<li><a href="#javascript">Capacidades de JavaScript</a></li>
+		<li><a href="#dom">Interacciones con DOM </a></li>
+		<li><a href="#avanzado">Interacciones con temas avanzados</a></li>
+		
+	  
+        </ul>
+  </nav>
+
+</header>
+<body>
+<section>
+<div id= "semantica">
+<center> <h2>Estructura semántica de HTML5 </h2></center>
+<ul>
+<li><header>Header: < header > </header> </li>
+<li> <nav> nav: < nav > </nav> </li>
+<li> <article> article: < article > </article> </li>
+<li> <section> section: < section > </section> </li>
+<li> <footer> footer: < footer > <footer></li>
+<li> <aside> aside: < aside > </aside> </li>
+<li> <figure> figure: < figure > </figure>  </li>
+<li> <figcaption> < figcaption > </figcaption> </li>
+<li> <hgroup> < hgroup > </hgroup> </li>
+<li> <mark> < mark > </mark> </li>
+<li> <time> < time > </time> </li>
+<li> < audio > <audio src="30seconds.mp4" controls> </audio> </li>
+<li> < video > <video src="30seconds.mp4"  width="300" height="200"></video> </li>
+<li> SVG
+<br>
+<svg width="150" height="150">
+  <circle cx="70" cy="70" r="50"
+  stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+ <svg width="400" height="100">
+  <rect width="400" height="100" 
+  style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+  <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+</svg> </li>
+<li> CANVAS
+<br>
+<canvas id ="can" width="500" height="200">
+</canvas></li>
+</ul>
+<hr>
+
+</div>
+
+<div id ="selector">
+<center> <h2>Selectores de CSS3 y propiedades de estilo </h2></center>
+
+<div class="clase">
+  <p>Selector con clase</p>
+  .intro { ...	}
+	<h4>Selecciona todos los elementos el nombre de la clase </h4>
+</div>
+
+
+<div id="myId">
+  <p>Selector con id</p>
+  #myId{...}
+	
+	<h4>Selecciona todos los elementos con el nombre id</h4>
+</div>
+
+<div>
+ <p>Selector * </p>
+* {... }
+
+<h4>Selecciona todos los elementos </h4>
+</div>
+
+<div>
+ <p>Selector de elementos </p>
+h4 {... }
+
+<h4>Selecciona el elemento por su nombre, se puede nombrar uno o mas elementos (h4, div...) </h4>
+</div>
+
+<div>
+ <p>Selector elemento > elemento </p>
+div > p {... }
+
+<h4>Selecciona el elemento por su nombre cuando tiene un padre </h4>
+</div>
+
+<div>
+ <p>Selector con atributos </p>
+
+ [title~=valor]{...} 
+ <h4>Selecciona todos los elementos con un atributo de título que contiene la palabra que se menciona </h4>
+
+ [lang|=valor] {...} 
+ <h4>Selecciona todos los elementos con un valor de atributo lang que comienza con el valor indicado </h4>
+
+ a[href^=valor] {...} 
+ <h4>Selecciona cada elemento cuyo valor de atributo href comienza con el valor indicado </h4>
+
+ a[href$=".valor"] {...} 
+ <h4>Selecciona cada elemento cuyo valor de atributo href finaliza con el valor indicado" </h4>
+
+ a[href*="valor"] {...} 
+ <h4>Selecciona cada elemento cuyo valor de atributo href contiene la subcadena del valor indicado </h4>
+
+</div>
+
+
+<div>
+ <p>Propiedades del color</p>
+	
+<p> Colores hexadecimales</p>
+#h1 {background-color: #ff0000;}	<h4> rojo </h4>
+
+
+<p> Colores RGB y RGBA</p>
+
+#h2 {background-color: rgb(0, 255, 0);}   <h4> verde </h4>
+h2 {background-color: rgba(0, 255, 0, 0.3);}   <h4> verde con opacidad </h4>
+
+<br>
+<p> Colores HSL y HSLA</p>
+.p4 {background-color: hsl(120, 60%, 70%);}    <h4> verde pastel </h4>
+#p4 {background-color: hsla(120, 60%, 70%, 0.3);}    <h4> verde pastel con opacidad </h4>
+
+
+<br><br>
+<p>Propiedades del texto</p>
+
+<h5>text-decoration: </h5>
+h1 {
+    text-decoration: overline;
+}
+<br>
+h2 {
+    text-decoration: line-through;
+}
+<br>
+h3 {
+    text-decoration: underline;
+}
+<br>
+
+<h5>text-transform: </h5>
+p.uppercase {
+    text-transform: uppercase;
+}
+<br>
+p.lowercase {
+    text-transform: lowercase;
+}
+<br>
+p.capitalize {
+    text-transform: capitalize;
+}
+<br>
+
+<h5>text-shadow: </h5>
+h1 {
+    text-shadow: 2px 2px #ff0000;
+}
+
+
+<p> Propiedades de la fuente</p>
+
+font-style:normal|italic|oblique
+<br>
+font-variant:normal|small-caps
+<br>
+font-weight: normal|bold|bolder|light|lighter|#
+<br>
+font-size: {lenght}
+<br>
+font-family:{font}<br>
+font shorthand property<br>
+
+
+<p> Box properties</p>
+
+border<br>
+margin<br>
+padding<br>
+
+<p> Medidas</p>
+width <br>
+height <br>
+min/max prefixes <br>
+box-sizing (content-box|border-box) <br>
+
+<p> Visibilidad</p>
+display(incline|block|inline-block|none|...) <br>
+visibility(visible|hidden) <br>
+white-space(normal|pre|nowrap|pre-wrap|pre-line) <br>
+overflow(visible|hidden|scroll|auto) <br>
+
+</div>
+
+<hr>
+
+</div>
+
+<div id="animacion">
+
+<center> <h2>Diseño y animación avanzados </h2></center>
+<p>Legacy layouts</p>
+
+<h5> Posicion</h5>
+position :	absolute;		
+		 : 	relative;
+		<br>
+	
+	
+<h5>Display </h5>		
+p.ex1 {display: none;}
+p.ex2 {display: inline;}
+p.ex3 {display: block;}
+p.ex4 {display: inline-block;}
+
+<p>Flexbox</p>
+
+ <div class="flex">
+    <div>uno</div>
+    <div>dos</div>
+    <div>tres</div>
+  </div>
+</div>
+<div>
+
+<p>Grid</p>
+<div class="grid-container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>  
+</div>
+</div>
+
+<p>Transitions and animations</p>
+
+<figure id="pic">
+  <img src="poster.jpg" width="300" height="200" alt="A diagram of route from the user request to the web server and back again">
+  
+</figcaption>
+</figure>
+<hr>
+</div>
+
+<div id="javascript">
+
+<center> <h2>Capacidades de JavaScript </h2></center>
+<p>Variables </h>
+<h4>Tipos: 
+String, number, boolean, array, object, null, undefined </h4> 
+<br>
+var myString = "String";
+<br>
+<script>
+var myString = "Mi String";
+console.log(myString);
+
+var myNumber= 7;
+console.log(myNumber);
+
+var myBoolean= true;
+console.log(myBoolean);
+</script>
+<p>Funciones </p>
+<h4> Sin argumentos <br>
+function f1(){
+}
+</h4>
+
+<h4>
+Con argumentos <br>
+function f1(1,2){
+}</h4>
+<script>
+var num1= 5;
+var num2=7;
+var result = 0;
+result = f1(5,7);
+function f1(num1, num2){
+console.log("Entre a la funcion f1");
+return num2 - num1;
+
+}
+
+console.log(result);
+
+</script>
+
+<p>Arreglos </p>
+
+<h4> Declarar arreglos <br>
+var numeros = [1,2,3,4];
+var nombres = ["Jose", "Gaby", "Luis"]; </h4>
+
+<p>Funciones de los arreglos </p>
+<h4>
+push, pop, concat, map, filter, some, every
+forEach,reduce, sort, splice, slice, join, reverse </h4>
+
+<script>
+var numeros = [1,2,3,4];
+var nombres = ["Jose", "Gaby", "Luis"];
+
+nombres.push("Jennifer");
+nombres.pop();
+nombres.sort();
+
+nombres =nombres.concat(numeros);
+nombres = nombres.slice(0,1)
+
+console.log(numeros);
+console.log(nombres);
+</script>
+<p>Objetos </p>
+<h4>Declarar objeto <br>
+var animal = {}; <br>
+animal.nombre = "Gato"; </h4>
+
+<script>
+var animal = {};
+animal.nombre = "Gato";
+console.log(animal);
+</script>
+<hr>
+</div>
+<div id="dom">
+
+<center> <h2>Interacciones con DOM </h2></center>
+
+
+<p>Consultando el DOM</p>
+<h4>getElementById <br>
+var x = document.getElementById("id")<br>
+<br>
+getElementsByTagName<br>
+var x = document.getElementsByTagName("LI");<br>
+<br>
+querySelector<br>
+var x = document.querySelector("#id")<br>
+var list = document.querySelectorAll(".item");<br>
+</h4>
+
+
+<p>Manipulando el DOM</p>
+<h4>
+add|modify|remove|
+change| style </h4>
+
+</div>
+<hr>
+<br>
+<div id="avanzado">
+
+<center> <h2>Interacciones con temas avanzados </h2></center>
+
+<p>try - catch - finally </p>
+<h4>
+try{<br>
+//línea (s) de código sospechoso<br>
+}catch{<br>
+// . descripcion<br>
+// . mensaje<br>
+// .numero<br>
+// . stack<br>
+<br>
+}finally{<br>
+// éxito o falla, el código se ejecuta aquí<br>
+}<br>
+
+</h4>
+
+<p>Objeto promesa </p>
+
+<h4>Una Promesa se encuentra en uno de los siguientes estados:<br><br>
+
+pendiente (pending): estado inicial, no cumplida o rechazada.<br>
+cumplida (fulfilled): significa que la operación se completó satisfactoriamente.<br>
+rechazada (rejected): significa que la operación falló. </h4>
+
+
+
+<hr>
+</div>
+<script>
+  var canvas = document.getElementById("can");
+      var context = canvas.getContext("2d");
+   
+     context.fillStyle = "yellow";
+      context.fillRect(0, 0, 500, 100);    
+
+      context.fillStyle = "blue";
+
+     
+      context.beginPath();
+
+      context.arc(250, 50, 50, 0, Math.PI*2, true); 
+
+      
+      context.closePath();
+
+      context.fill();
+
+  
+      var text = "Ejemplo Canvas";
+      context.fillStyle = "red";
+
+      context.strokeStyle = "black";
+      context.font = "36px Verdana";
+
+     
+      context.strokeText(text, 98, 60);
+      context.fillText(text, 96, 60);
+
+</script>
+</section>
+<footer id="footer">
+
+<small>Copyright © 2017 - Brenda Gabriela Romero Moreno - BGRM</small>
+
+
+
+</footer>
+</body>
+</html>

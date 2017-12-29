@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML5 and CSS3 Fundamentals</title>
+  
+<link rel="stylesheet" href="styles.css" type="text/css"  media="all">
+
+</head>
+
+
+<body>
+
+<header>
+
+  <hgroup>
+   <center> <h1>Curso HTML5 and CSS3 Fundamentals</h1> </center>
+    
+  </hgroup>
+
+  <nav>
+  <h4>
+    <ul id="contenido">
+	<li><a href="#svg">SVG</a></li>
+	 <li><a href="#canvas">Canvas</a></li>
+	    <li><a href="#video">Videos</a></li>
+		<li><a href="#formulario">Formularios</a></li>
+		<li><a href="#imagen">Imagenes</a></li>
+		<li><a href="#tablas">Tablas</a></li>
+	  <li><a href="#listas">Listas</a></li>  
+	  
+	  
+	  
+	</h4>  
+        </ul>
+  </nav>
+
+</header>
+<body>
+<section>
+<div id="listas">
+<center><h1>Listas</h1> </center>
+
+<h4>Lista no ordenada </h4>
+<ul>
+  <li>Gabriela</li>
+  <li>José</li>
+  <li> Ana </li>
+</ul>
+
+<br>
+
+<h4>Lista ordenada </h4>
+<ol>
+  <li>Auto</li>
+  <li>Bocina</li>
+  <li>Casa</li>
+  <li>Dado</li>
+</ol>
+<br>
+
+<h4>Lista de definiciones </h4>
+<dl>
+  <dt>Término 1</dt>
+  <dd>Definicion 1</dd>
+  <dt>Termino 2</dt>
+  <dd>Definicion 2</dd>
+  <dd>Definicion 2 </dd>
+</dl>
+<hr>
+</div>
+<br>
+<br>
+<br>
+
+
+<div id="tablas">
+<center><h1>Tablas</h1> </center>
+
+<h4>Tabla con bordes a las orillas (estilo con css) </h4>
+<table id="tabla1">
+  <caption>Descripcion 
+  <tr>
+    <td>Fila 1, Columna 1 
+    <td>Fila 1, Columna 2
+    <td>Fila 1, Columna3
+  <tr>
+   <td>Fila 2, Columna 1 
+    <td>Fila 2, Columna 2
+    <td>Fila 2, Columna 3
+</table>
+
+
+
+<h4>Tabla con todos los bordes (estilo con css) </h4>
+<table id="tabla2">
+  <tr>
+    <td>Fila 1, Columna 1 
+    <td>Fila 1, Columna 2
+    <td>Fila 1, Columna 3
+  <tr>
+   <td>Fila 2, Columna 1 
+    <td>Fila 2, Columna 2
+    <td>Fila 2, Columna 3
+</table>
+
+<h4>Tabla con la primer fila con color</h4>
+
+<table id="tabla3">
+  <tr class="firstrow">
+     <td>Fila 1, Columna 1 
+    <td>Fila 1, Columna 2
+    <td>Fila 1, Columna 3
+  <tr>
+     <td>Fila 2, Columna 1 
+    <td>Fila 2, Columna 2
+    <td>Fila 2, Columna 3
+</table>
+
+<br>
+<h4>Tabla con encabezado y pie  </h4>
+
+
+<table id="tabla6">
+<col>
+<col>
+<col>
+<thead>
+  <tr>
+    <th>Encabezado 1
+    <th>Encabezado 2
+    <th>Encabezado 3
+<tfoot>
+  <tr>
+    <td>Pie 1
+    <td>Pie 2
+    <td>Pie 3
+<tbody>
+  <tr>
+   <td>Fila 1, Columna 1 
+    <td>Fila 1, Columna 2
+    <td>Fila 1, Columna 3
+  <tr>
+        <td>Fila 2, Columna 1 
+    <td>Fila 2, Columna 2
+    <td>Fila 2, Columna 3
+</table>
+
+
+<hr>
+
+
+
+
+</div>
+
+
+<div id="video">
+<center><h1>Video</h1> </center>
+
+<center> <video src="30seconds.mp4" width="420" height="340" controls poster="poster.jpg"autoplay muted> </center>
+<br>
+<hr>
+</div>
+
+
+<div id="imagen">
+<center><h1>Imagen</h1> </center>
+<br>
+<figure>
+  <img src="www-diagram.gif" alt="A diagram of route from the user request to the web server and back again">
+  <figcaption>Figure 1 Descripcion de la imagen...
+</figcaption>
+</figure>
+<br>
+<br>
+<br><br>
+<br><br><br><br>
+<hr>
+</div>
+
+<div id="formulario">
+
+<center><h1>Formularios</h1> </center>
+<br>
+<form method="POST" action="form.aspx" >
+
+
+<fieldset>
+  <legend> Input Radio</legend>
+  <p><label> <input type="radio" name="size" value="opc1"> Opcion 1</label></p>
+  <p><label> <input type="radio" name="size" value="opc2" checked> Opcion 2</label></p>
+  <p><label> <input type="radio" name="size" value="opc3"> Opcion 3</label></p>
+
+</fieldset>
+
+<fieldset>
+  <legend>Checkbox</legend>
+  <p><label> <input type="checkbox" name="toppings" value="bacon"> Opcion 1 </label></p>
+  <p><label> <input type="checkbox" name="toppings" value="cheese"> Opcion 2</label></p>
+  <p><label> <input type="checkbox" name="toppings" value="onion" checked> Opcion 3</label></p>
+</fieldset>
+
+<p>Select Multiple 
+<select name="crust" multiple>
+  <option value="c1">Opcion 1</option>
+  <option value="c2" selected>Opcion 2<option>
+  <option value="c3">Opcion 3</option>
+</select>
+</p>
+
+<p><label for="comments">TextArea:</label>
+  <textarea name="comments" cols="50" rows="5" maxlength="1000">
+  </textarea>
+  
+</p>
+
+<H4>Tipos de input </H4>
+<p><label><span>Correo: </span><input type=email name=emailInput required></label></p>
+
+<p><label><span>Telefono: </span><input type=tel name=telInput required></label></p>
+
+<p><label><span>URL: </span><input type=url name=urlInput required></label></p>
+
+<p><label><span>Numerico: </span><input type=number name=numberInput required></label></p>
+
+<p><label><span>Range Input: </span><input type=range name=rangeInput required value=42></label></p>
+
+<p><label><span>Lista de datos: </span>
+<input type=text list=someList>
+<datalist id=someList>
+  <option label=First value="First">
+  <option label=Second value="Second">
+  <option label=Third value="Third">
+</datalist>
+</label></p>
+
+<p><label><span>Codigo postal: </span><input type=text pattern="^\d{5}(-\d{4})?$" required></label>
+<p><label><span>Placeholder: </span><input type=text placeholder="Placeholder" required></label></p>
+
+<p><button>Submit</button></p>
+</form>
+<br>
+<hr>
+</div>
+
+<div id="canvas">
+<center><h1>Canvas</h1> </center>
+
+<canvas id="myCanvas" width="500" height="150">
+ 
+</canvas>
+<hr>
+</div>
+
+
+
+<div id="svg">
+<center><h1>SVG</h1> </center>
+
+<svg width="150" height="150">
+  <circle cx="70" cy="70" r="50"
+  stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+ <svg width="400" height="100">
+  <rect width="400" height="100" 
+  style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+  
+  <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+
+</svg>
+</div>
+</section>
+<footer>
+
+<small>Copyright © 2017 - Brenda Gabriela Romero Moreno - BGRM</small>
+
+
+
+</footer>
+
+<script>
+  var canvas = document.getElementById("myCanvas");
+      var context = canvas.getContext("2d");
+   
+     context.fillStyle = "yellow";
+      context.fillRect(0, 0, 500, 100);    
+
+      context.fillStyle = "blue";
+
+     
+      context.beginPath();
+
+      context.arc(250, 50, 50, 0, Math.PI*2, true); 
+
+      
+      context.closePath();
+
+      context.fill();
+
+  
+      var text = "Ejemplo Canvas";
+      context.fillStyle = "red";
+
+      context.strokeStyle = "black";
+      context.font = "36px Verdana";
+
+     
+      context.strokeText(text, 98, 60);
+      context.fillText(text, 96, 60);
+
+</script>
+</body>
+</html>

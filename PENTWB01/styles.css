@@ -1,0 +1,222 @@
+﻿h2 {
+  font-family:Arial;
+  color:#FE2EC8;
+  font-size:1.6;
+}
+header {
+  width:80%;
+  background-color:#E6E6E6;
+  color:black;
+  margin-right:auto;
+  margin-left:auto;
+  padding:10px;
+  overflow:hidden;
+}
+
+body {
+  font-family:Arial,Helvettica,sans-serif;
+  background-color:#81F7F3;
+}
+
+footer {
+  font-family:Arial;
+  width:80%;
+  background-color:#E6E6E6;
+  color:black;
+  margin-right:auto;
+  margin-left:auto;
+  height:50px;
+  padding:10px;
+  font-size:1.6;
+}
+#contenido {
+  font-family:Helvettica;
+  color:#2ECCFA;
+  font-size:2.6;
+}
+
+#listas {
+  font-family:Helvettica;
+  color:#31B404;
+   font-size:1.6;
+  
+}
+
+
+#tablas {
+  font-family:Helvettica;
+  color:#0101DF;
+  font-size:2;
+  
+}
+
+#formulario {
+  font-family:Arial;
+  color:#AEB404;
+  
+}
+nav {
+  width:40%;
+  float:right;
+}
+
+nav ul {
+  list-style-type:none;
+}
+
+nav li {
+  float:right;
+  margin-right:5px;
+}
+
+
+.important {
+  color:red;
+}
+
+
+
+span.important {
+  color:darkred;
+}
+
+h1, h2, h3, p.important {
+  margin-left:50px;
+}
+
+a:link {
+  text-decoration:none;
+  color:#0040FF;
+}
+
+a:hover {
+  text-decoration:underline;
+}
+
+
+a[href^="email"] {
+  font-size:2em;
+}
+
+span[title$="idea"] {
+  text-decoration:overline;
+}
+
+
+h1 {
+  font-size:2em;
+  margin:0;
+  padding:0;
+  padding-top:10px;
+}
+
+
+
+h3 {
+  font-size:1.3;
+}
+
+hgroup {
+  width:70%;
+  float:left;
+}
+
+hgroup h1 {
+  padding-top:0;
+  line-height:1em;
+}
+
+hgroup h2 {
+  text-transform:uppercase;
+  font-size:1.2em;
+  line-height:1em;
+}
+
+
+
+
+
+section {
+  width:80%;
+  background-color:white;
+  margin-right:auto;
+  margin-left:auto;
+  border-color:black;
+  border-style:solid;
+  border-width:5px;
+  padding:5px;
+}
+
+p {
+  margin:10px;
+}
+
+img {
+  float:right;
+  margin:0px 0px 10px 10px;
+  box-shadow:3px 3px 5px 1px #cccccc;
+}
+
+
+#tabla1 {
+  border:1px solid black;
+  border-spacing:1.5em; 
+  caption-side:bottom;
+}  
+
+#tabla2 td {
+  border:1px solid black;
+  border-spacing:1px;
+}
+
+tr.firstrow {
+  border:1px solid black;
+  border-spacing:1px;
+  background-color:#999999;
+}
+
+
+col.firstcolumn {
+  border:1px solid black;
+  border-spacing:1px;
+  background-color:#999999;
+}
+
+
+
+#tabla6 {
+	border-collapse: collapse;  border: 2px solid black; caption-side:top;
+	}
+#tabla6 thead{
+	
+}
+#tabla6 tbody tr{
+	
+}
+#tabla6 tbody td{
+	border: 1px solid blue;
+	}
+#tabla6 colgroup{
+	
+}
+#tabla6 col{
+	
+}
+#tabla6 td{
+	
+}
+#tabla6 th{
+	
+}
+#tabla6 tfoot{
+	
+}
+
+
+
+
+
+
+
+
+

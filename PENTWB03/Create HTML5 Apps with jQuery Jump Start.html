@@ -6,7 +6,7 @@
   <title>Create HTML5 Apps with jQuery Jump Start</title>
   
 <link rel="stylesheet" href="styles.css" type="text/css"  media="all">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <header id ="header">
@@ -18,12 +18,13 @@
   <nav>
   
     <ul id="contenido">
-	<li><a href="#semantica">Seleccion</a></li>
-	 <li><a href="#selector">Manipulando el DOM</a></li>
-	    <li><a href="#animacion">Eventos</a></li>
-		<li><a href="#javascript">Efectos</a></li>
-		<li><a href="#dom">Ajax </a></li>
-		<li><a href="#avanzado">Librerias</a></li>
+
+<li><a href="#efectos">Efectos</a></li>
+	    <li><a href="#eventos">Eventos</a></li>
+		
+		<li><a href="#selector">Manipulando el DOM</a></li>
+			<li><a href="#seleccion">Seleccion</a></li>
+		
 		
 	  
         </ul>
@@ -32,18 +33,11 @@
 </header>
 <body>
 <section>
-<div id= "semantica">
+<div id= "seleccion">
 <center> <h2>Seleccion </h2></center>
 
 <br>
 <p> Tipos de selectores</p>
-
-<h4>$("selector<br>
-$("selector").method();<br>
-$("selector1, selector2, selector N");<br>
-$("element[attr='value'][attr='value2']"); </h4>
-
-<br><br>
 
 <h5>Selectores Básicos</h5>
 <h4> $("*"); <br>
@@ -53,6 +47,29 @@ $(".class");<br> </h4>
 <script>
 $(document).ready(function(){
     $("#intro").css("background-color", "yellow");
+	
+	 $("button").click(function(){
+        $("<span>Texto agregado</span>").appendTo(agregar);
+    });
+	
+	$("#hide").click(function(){
+        $(mostrar).hide();
+    });
+    $("#show").click(function(){
+        $(mostrar).show();
+    });
+	
+	$("input").focus(function(){
+        $(this).css("background-color", "#cccccc");
+    });
+	
+	$("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+	
+	 $(doble).dblclick(function(){
+        $(this).hide();
+    });
 });
 </script>
 
@@ -69,19 +86,25 @@ $( "selector[attr='value']" );<br> </h4>
 <div id ="selector">
 <center> <h2>Manipulando el DOM </h2></center>
 <p>Manipular elementos</p>
+<h4>
+$("content").appendTo(" selector "); -- Nos permite tomar un elemento y moverlo a algún otro lugar en el DOM de nuestra página.<br>
 
-$("content").appendTo(" selector ");<br>
-$("content").prependTo(" selector ");<br>
-$("selector").append("<li>this is after</li>");<br>
-$("selector").prepend("<li>this is after</li>");<br>
-$("selector").clone().appendTo("selector2");<br>
+
+
+<div id = "agregar">Parrafo donde agregaremos el texto   </div>
+<button>Agregar texto</button>
+<br>
+<br>
+$("content").prependTo(" selector "); -- Nos permite agregar elementos después del elemento seleccionado<br>
+$("selector").clone().appendTo("selector2");<br> </h4>
 
 <p>Modificando Atributos</p>
+<h4>
 $("selector").attr("name","value");<br>
 $("selector").prop("name","value");<br>
 $("selector").removeAttr("name");<br>
 $("selector").removeProp("prop");<br>
-$("selector").attr("name", function(attr) { ... } );<br>
+$("selector").attr("name", function(attr) { ... } );<br> </h4>
 
 <p>Elementos con estilo CSS</p>
 <h4>
@@ -94,7 +117,7 @@ $("selector").css("style", function(index, value) { ... } ); </h4>
 
 </div>
 
-<div id="animacion">
+<div id="eventos">
 
 <center> <h2>Eventos </h2></center>
 <h4>
@@ -102,7 +125,7 @@ $("selector").css("style", function(index, value) { ... } ); </h4>
 • .ready()<br>
 • .unload()<br>
 • .change()<br>
-• .focus()<br>
+• .focus() 
 • .blur()<br>
 • .keydown()<br>
 • .keypress()<br>
@@ -116,41 +139,35 @@ $("selector").css("style", function(index, value) { ... } ); </h4>
 • .mouseout()<br>
 </h4>
 
+-- Ejemplo de Focus y blur: <input type="text" name="fullname"><br>
+-- Ejemplo dobleclick : <div id="doble">Si das doble clik en este texto, se ocultará</div>
+
 <hr>
 </div>
 
-<div id="javascript">
+<div id="efectos">
 
-<center> <h2> </h2></center>
+<center> <h2>Efectos </h2></center>
+<h4>
+• .hide()<br>
+• .show()<br>
+• .toggle() <br>
+
+<div id = "mostrar">Este texto se mostrará y ocultará</div>
+
+<button id="hide">Ocultar</button>
+<button id="show">Mostrar</button>
+</h4>
 
 
 </div>
-<div id="dom">
-
-<center> <h2> </h2></center>
-
-
-
-</div>
-
-<br>
-<div id="avanzado">
-
-<center> <h2> </h2></center>
-
-
-
 
 <hr>
 </div>
 <script>
 </section>
 <footer id="footer">
-
 <small>Copyright © 2017 - Brenda Gabriela Romero Moreno - BGRM</small>
-
-
-
 </footer>
 </body>
 </html>

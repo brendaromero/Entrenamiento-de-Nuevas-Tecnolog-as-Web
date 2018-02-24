@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Jump Start</title>
+  
+<link rel="stylesheet" href="styles.css" type="text/css"  media="all">
+
+</head>
+
+<header id ="header">
+
+ 
+   <center id="center"> <h1>Curso CSS Jump Start</h1> </center>
+    
+ 
+  <nav>
+  
+    <ul id="contenido">
+		
+	
+		<li><a href="#queries">4.-Consultas de medios </a></li>
+		    <li><a href="#disenio">3.-Diseños de página </a></li>
+		 <li><a href="#selector">2.-Selectores de CSS</a></li>
+		 <li><a href="#intro">1.-Introducción a CSS</a></li>
+		 	<li><a href="#preprocesador">6.-Preprocesadores de CSS </a></li>
+		<li><a href="#transformacion">5.-Transformaciones y transiciones </a></li>
+	
+		
+	  
+        </ul>
+  </nav>
+
+</header>
+<body>
+<section>
+<div id= "intro">
+<center> <h2>Introducción con CSS </h2></center>
+<div id="subtitulos">1.1Sintaxis:</div> 	<br>
+
+<div class="sintaxis"> selector{ </div>  -----------------------> ¿A qué elementos o tipos de elementos desea aplicar el estilo? 
+<div class="sintaxis">property: value </div> -----------------------> ¿Cómo quieres que se vean y dónde quieres que aparezcan?
+<div class="sintaxis">}</div>
+		
+<br>
+<br>		
+		
+<div id="subtitulos">1.2Selección de elementos básicos </div>
+		<h4>-Por Elemento</h4>
+		<h5>Selecciona el elemento por su nombre, se puede nombrar uno o mas elementos (h4, div...) </h5>
+		
+		<div class="sintaxis">h2 { </div> 
+	   <div class="sintaxis">font-family: verdana, sans-serif; </div> 
+	   <div class="sintaxis">font-weight: bold; </div> 
+	  <div class="sintaxis"> color: blue; </div> 
+		<div class="sintaxis">} </div> 
+		
+		
+		<h4>-Por Clase </h4>
+		<h5>Se aplica a todos los elementos con una clase coincidente</h5>
+		<div class="sintaxis">.title { </div> 
+		<div class="sintaxis">	color:red; </div> 
+		<div class="sintaxis">}</div>
+		
+		<h5>Por defecto, las clases están disponibles para todos los elementos</h5>
+
+		<h5>Límite a elementos específicos por clase precedente con el nombre del elemento </h5>
+		
+		<div class="sintaxis">div.title { </div>
+		<div class="sintaxis">	color:red; </div>
+		<div class="sintaxis">} </div>
+		
+		<h4>-Por Id</h4>
+		<h5> Se aplica al elemento por su ID</h5>
+		
+		<div class="sintaxis">#header {  </div>
+		<div class="sintaxis">   font-family: verdana, sans-serif;  </div>
+		<div class="sintaxis">   font-weight: bold;  </div>
+		<div class="sintaxis">   color: blue;  </div>
+		<div class="sintaxis">}  </div>
+		
+		<br>
+		<br>
+		
+<div id="subtitulos">1.3 Aplicación de CSS a páginas y elementos</div>
+		
+		
+		<h4>-Enlace a un archivo externo</h4>
+
+	<div class="sintaxis"> < link rel='stylesheet' type='text/css' href='site.css' /> </div>
+
+
+<h4>-Añadir la sección < style> a la página </h4>
+	<div class="sintaxis">< style></div>
+
+	<div class="sintaxis">	/* sintaxis de CSS */</div>
+
+	<div class="sintaxis"> </ style > .</ style ></div>
+
+<h4>-Use el atributo de estilo</h4>
+
+	<div class="sintaxis"> < div style='property:value;property:value;'>Hola! </ div  >.</ div  > </div>
+		
+	
+<div id="subtitulos"> 1.4 Herencia CSS </div>
+
+<h4>-Conflictos</h4>
+
+<h5>Los conflictos solo surgen cuando la misma propiedad tiene dos valores diferentes</h5>
+
+<h4>-Aplicación de estilo</h4>
+<h5>Lo más cercano al elemento tiene prioridad</h5>
+
+
+<h4>-Conflictos de elementos</h4>	
+<h5>Se pueden aplicar múltiples selectores a un elemento</h5>
+		
+		
+<h5>Una de las características principales de CSS es la herencia de los estilos definidos para los elementos. Cuando se establece el valor de una propiedad CSS en un elemento, sus elementos descendientes heredan de forma automática el valor de esa propiedad. </h5>
+<hr>
+
+</div>
+
+<div id ="selector">
+<center> <h2>Selectores de CSS </h2></center>
+<div id="subtitulos">2.1 Estructura del documento</div>
+<div id="subtitulos">2.2 Pseudo-clases </div>
+<h4>Las pseudo-clases se basan en el estado de la página</h4>
+<h4>- Ubicación de un elemento</h4>
+<h4>- Estado de un elemento</h4>
+<h4>Sintaxis</h4>
+<div class="sintaxis">elemento: pseudo-clase </div>
+
+Estructura de documento complejo
+• Simplemente tener una relación padre / hijo no siempre es indicativo
+de cómo queremos diseñar algo
+- Primer elemento en una jerarquía
+- Último elemento en una jerarquía
+- Aplica un estilo diferente si es el único niño
+• No se muestran resultados
+
+
+Estructura del documento pseudo-clases
+• Posición
+– first-child
+– last-child
+– nth-child(#)
+• Posición y tipo
+– first-of-type
+– last-of-type
+– nth-child-of-type(#)
+• Estructura del documento
+– empty
+– not(selector)
+
+
+Pseudo-clases de estado de elementos
+• De acuerdo con lo que está pasando con el elemento
+• Enlaces
+– visited
+– focus
+– hover
+– active
+• Formularios
+– enabled
+– disabled
+– checked
+
+
+Pseudo-elementos
+• Grupos de texto objetivo en función del estado o la ubicación
+• Sintaxis
+• Ejemplos
+– first-letter
+– first-line
+– selection
+element::pseudo-element
+
+
+
+<div id="subtitulos">2.3 Dimensionamiento </div>
+Tamaños absolutos
+• Centímetros (cm)
+• Milímetros (mm)
+• Pulgadas (en)
+• Picas (pc): 12 puntos o 1/6 de pulgada
+• Puntos (pt) - 1/72 de pulgada
+• Pixeles (px): 1/96 de pulgada
+
+
+Tamaños relativos
+• em
+- Según el tamaño de fuente del elemento actual
+• rem
+- Según el tamaño de fuente del elemento html (16 píxeles por defecto)
+• ex
+- Altura de la minúscula x-altura de la fuente
+• ch
+- Ancho del carácter 0 (cero) de la fuente
+
+Tamaños de pantalla
+• 1vw
+- 1% del ancho de la ventana gráfica
+• 1vh
+- 1% de la altura de la ventana gráfica
+• No es compatible con todos los navegadores
+
+<hr>
+
+</div>
+
+<div id="disenio">
+
+<center> <h2>Diseños de página </h2></center>
+
+• Consulta de pantallas y dispositivos
+
+
+• Contenido solo móvil
+
+
+• Refinando su página
+
+
+Creando una consulta
+• Tipo de medio
+• Características de los medios
+• Operadores logicos
+
+Propiedades de consulta
+• Ancho / alto mínimo
+• Ancho / alto máximo
+• Orientación de la pantalla
+• Ancho del dispositivo
+
+
+Propiedades de consulta
+• Ancho / alto mínimo
+@media (min-width: 700px) { ... }
+• Ancho / alto máximo
+@media (min-width: 700px) { ... }
+• Orientación de la pantalla
+@media all and (orientation: portrait) { ... }
+• Resolución de la pantalla
+• Relación de aspecto
+
+
+
+<hr>
+</div>
+
+<div id="queries">
+
+<center> <h2>Consultas de medios </h2></center>
+Decidir y diseñar el contenido
+• Decide tus puntos de quiebre
+• Optimiza tu texto (tamaño y márgenes)
+• Ajustar objetivos táctiles
+• Usa el tamaño relativo
+<hr>
+</div>
+<div id="transformacion">
+
+<center> <h2>Transformaciones y transiciones </h2></center>
+Transformaciones
+• Cambiar el tamaño, rotar y sesgar elementos con CSS
+• Se puede usar dentro de cualquier clase, elemento, consulta de medios, etc.
+
+
+Trasladar
+• Mueva el elemento a otra ubicació
+
+Escala
+• Cambiar el tamaño del elemento
+<hr>
+<br>
+</div>
+<div id="preprocesador">
+
+<center> <h2>Preprocesadores de CSS </h2></center>
+
+<hr>
+</div>
+</section>
+<footer id="footer">
+
+<small>Copyright © 2018 - Brenda Gabriela Romero Moreno - BGRM</small>
+
+
+
+</footer>
+</body>
+</html>

@@ -121,6 +121,12 @@ center>h2 {
  
 }
 
+.lista {
+ 
+  background-color:white;
+ 
+}
+
 #subtitulos {
     background-color: #A9D0F5;
 	
@@ -131,4 +137,57 @@ center>h2 {
     background-color: #ABEBC6;	
 	font-family: Arial Black;
 	font-size: 80%; 
+}
+
+/* Seccion para formularios*/
+div,
+select {
+  margin: 8px;
+}
+
+input:checked + label {
+  color: red;
+}
+
+input[type="radio"]:checked {
+  box-shadow: 0 0 0 3px orange;
+}
+
+input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 3px hotpink;
+}
+
+option:checked {
+  box-shadow: 0 0 0 3px lime;
+  color: red;
+}
+
+/* Seccion para escala*/
+#escala {
+    margin: 150px;
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    border: 1px solid black;
+    -ms-transform: scale(0.5,0.5); 
+    -webkit-transform: scale(0.5,0.5); 
+    transform: scale(0.5,0.5); 
+}
+/* Seccion para girar*/
+#girar {
+    -ms-transform: rotate(-20deg); 
+	-webkit-transform: rotate(-20deg); 
+    transform: rotate(-20deg); 
+	}
+
+/* Seccion para trasladar*/
+#trasladar {
+    width: 200px;
+    height: 100px;
+    background-color: green;
+    border: 1px solid black;
+    -ms-transform: translate(50px,60px); 
+    -webkit-transform: translate(50px,60px);
+    transform: translate(50px,80px); 
 }

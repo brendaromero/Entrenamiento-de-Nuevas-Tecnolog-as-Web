@@ -24,7 +24,6 @@
 		    <li><a href="#disenio">3.-Diseños de página </a></li>
 		 <li><a href="#selector">2.-Selectores de CSS</a></li>
 		 <li><a href="#intro">1.-Introducción a CSS</a></li>
-		 	<li><a href="#preprocesador">6.-Preprocesadores de CSS </a></li>
 		<li><a href="#transformacion">5.-Transformaciones y transiciones </a></li>
 	
 		
@@ -127,85 +126,116 @@
 <div id="subtitulos">2.1 Estructura del documento</div>
 <div id="subtitulos">2.2 Pseudo-clases </div>
 <h4>Las pseudo-clases se basan en el estado de la página</h4>
+<h4> Las Pseudo-classes, junto con los pseudo-elements, permiten aplicar un estilo a un elemento no sólo en relación con el contenido de la estructura del documento. </h4>
 <h4>- Ubicación de un elemento</h4>
 <h4>- Estado de un elemento</h4>
 <h4>Sintaxis</h4>
-<div class="sintaxis">elemento: pseudo-clase </div>
 
-Estructura de documento complejo
-• Simplemente tener una relación padre / hijo no siempre es indicativo
-de cómo queremos diseñar algo
-- Primer elemento en una jerarquía
-- Último elemento en una jerarquía
-- Aplica un estilo diferente si es el único niño
-• No se muestran resultados
-
-
-Estructura del documento pseudo-clases
-• Posición
-– first-child
-– last-child
-– nth-child(#)
-• Posición y tipo
-– first-of-type
-– last-of-type
-– nth-child-of-type(#)
-• Estructura del documento
-– empty
-– not(selector)
-
-
-Pseudo-clases de estado de elementos
-• De acuerdo con lo que está pasando con el elemento
-• Enlaces
-– visited
-– focus
-– hover
-– active
-• Formularios
-– enabled
-– disabled
-– checked
-
-
-Pseudo-elementos
-• Grupos de texto objetivo en función del estado o la ubicación
-• Sintaxis
-• Ejemplos
-– first-letter
-– first-line
-– selection
-element::pseudo-element
+<div class="sintaxis">selector:pseudo-class { </div>
+ <div class="sintaxis"> property: value; </div>
+<div class="sintaxis">} </div>
 
 
 
-<div id="subtitulos">2.3 Dimensionamiento </div>
-Tamaños absolutos
-• Centímetros (cm)
-• Milímetros (mm)
-• Pulgadas (en)
-• Picas (pc): 12 puntos o 1/6 de pulgada
-• Puntos (pt) - 1/72 de pulgada
-• Pixeles (px): 1/96 de pulgada
+<h4>Estructura del documento pseudo-clases </h4>
+<ul class="lista">• Posición
+<li class="lista">– first-child </li>
+Ejemplo: <div>
+  <span>span color azul</span>
+  <span>span sin estilo</span>
+</div>
+<style>
+span:first-child {
+    background-color: blue;
+}
+</style>
+<br>
+<li class="lista">– last-child </li>
+Ejemplo:
+<ul>
+  <li>Este ítem no es de color verde limon.</li>
+  <li>Este ítem si lo es! (El último)</li>
+</ul>
+<style>
+li:last-child { 
+  background-color: lime;
+}
+</style>
+<br>
+<li class="lista">– nth-child(#) </li>
+</ul>
+Ejemplo:
+
+<div>
+    <span>¡Este span es amarillo!</span>
+    <span>Este span no lo es. :(</span>
+    <span>¡Pero este si lo es!</span>
+    <span>Este tampoco lo es...</span>
+  </div>
+  <style>
+span:nth-child(2n+1)
+{
+    background-color: yellow;
+}
+</style>
+
+<br>
+<ul class="lista">• Posición y tipo
+<li class="lista">– first-of-type </li>
+<li class="lista">– last-of-type </li>
+<li class="lista">– nth-child-of-type(#) </li>
+</ul>
+<ul class="lista">
+<li class="lista">• Estructura del documento
+<li class="lista">– empty </li>
+<li class="lista">– not(selector) </li>
+</ul>
 
 
-Tamaños relativos
-• em
-- Según el tamaño de fuente del elemento actual
-• rem
-- Según el tamaño de fuente del elemento html (16 píxeles por defecto)
-• ex
-- Altura de la minúscula x-altura de la fuente
-• ch
-- Ancho del carácter 0 (cero) de la fuente
+ <h4>Pseudo-clases de estado de elementos </h4>
+<ul class="lista">• Enlaces
+<li class="lista">– visited </li>
+<li class="lista">– focus </li>
+<li class="lista">– hover </li>
+<li class="lista">– active </li>
 
-Tamaños de pantalla
-• 1vw
-- 1% del ancho de la ventana gráfica
-• 1vh
-- 1% de la altura de la ventana gráfica
-• No es compatible con todos los navegadores
+Ejemplo:
+<p>El enlace siguiente cambiará su color mientras se mantenga pulsado: <a href="#">Enlace que cambiará de color</a>.</p>
 
+<style>
+a:link { color: blue } /* enlaces no visitados */
+a:visited { color: purple } /* enlaces visitados */
+a:hover { font-weight: bold } /* el usuario pasa el cursor por encima */
+a:active { color: lime } /* enlaces activos */
+</style>
+</ul>
+<ul class="lista">
+<li class="lista">• Formularios
+<li class="lista">– enabled </li>
+<li class="lista">– disabled </li>
+<li class="lista">– checked </li>
+</ul>
+
+Ejemplos:
+
+<div>
+  <input type="radio" name="my-input" id="yes">
+  <label for="yes">Si</label>
+
+  <input type="radio" name="my-input" id="no">
+  <label for="no">No</label>
+</div>
+
+<div>
+  <input type="checkbox" name="my-checkbox" id="opt-in">
+  <label for="opt-in">Check</label>
+</div>
+
+<select name="my-select" id="fruit">
+  <option value="opt1">Manzanas</option>
+  <option value="opt2">Uvas</option>
+  <option value="opt3">Peras</option>
+</select>
 <hr>
 
 </div>
@@ -253,35 +283,153 @@ Propiedades de consulta
 <div id="queries">
 
 <center> <h2>Consultas de medios </h2></center>
+
 Decidir y diseñar el contenido
-• Decide tus puntos de quiebre
-• Optimiza tu texto (tamaño y márgenes)
-• Ajustar objetivos táctiles
-• Usa el tamaño relativo
+<br>
+<br>• Decide tus puntos de quiebre
+<br>• Optimiza tu texto (tamaño y márgenes)
+<br>• Ajustar objetivos táctiles
+<br>• Usar el tamaño relativo
+<br>
+<br>
+Ejemplos:
+<style>
+body {
+    background-color: pink;
+}
+
+@media screen and (min-width: 480px) {
+    body {
+        background-color: lightblue;
+    }
+}
+</style>
+
+<style>
+.wrapper {overflow: auto;}
+
+#main {margin-left: 4px;}
+
+#leftsidebar {
+    float: none;
+    width: auto;
+}
+
+#menulist {
+    margin: 0;
+    padding: 0;
+}
+
+.menuitem {
+    background: #CDF0F6;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    list-style-type: none;
+    margin: 4px;
+    padding: 2px;
+}
+
+@media screen and (min-width: 480px) {
+    #leftsidebar {width: 200px; float: left;}
+    #main {margin-left: 216px;}
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+  <div id="leftsidebar">
+    <ul id="menulist">
+      <li class="menuitem">Menu-opción 1</li>
+      <li class="menuitem">Menu-opción 2</li>
+      <li class="menuitem">Menu-opción 3</li>
+      <li class="menuitem">Menu-opción 4</li>
+      <li class="menuitem">Menu-opción 5</li>
+   </ul>
+  </div>
+  <div id="main">
+    <h1>Para poder ver el efecto, es necesario reducir la ventana</h1>
+    <p>Si la ventana gráfica tiene menos de 480 píxeles, el menú estará encima del contenido, de lo contrario, se mostrará el menú a la derecha</p>
+  </div>
+</div>
+
 <hr>
 </div>
 <div id="transformacion">
 
 <center> <h2>Transformaciones y transiciones </h2></center>
-Transformaciones
-• Cambiar el tamaño, rotar y sesgar elementos con CSS
+<h4>Transformaciones </h4>
+• Cambiar el tamaño, rotar y sesgar elementos con CSS<br>
 • Se puede usar dentro de cualquier clase, elemento, consulta de medios, etc.
 
+<style> 
+#trans {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition: width 2s; 
+    transition: width 2s;
+}
 
-Trasladar
-• Mueva el elemento a otra ubicació
+#trans:hover {
+    width: 300px;
+}
+</style>
 
-Escala
+<div id="trans">
+<br>
+</div>
+<h4>Trasladar</h4>
+<div id="trasladar">Mueva el elemento a otra ubicación </div>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<h4>Escala</h4>
 • Cambiar el tamaño del elemento
+<div id="escala">
+Este div se mostrará a escala
+</div>
+
+<h4>Girar</h4>
+• Gira el elemento
+
+<div id="girar">
+Este div se ha girado
+</div>
+<h4>Sesgar</h4>
+• Sesgar el elemento
+<style>
+#sesgar {
+    width: 200px;
+    height: 100px;
+    background-color: purple;
+    border: 1px solid black;
+}
+
+#myDivSes {
+    -ms-transform: skew(20deg,10deg); 
+    -webkit-transform: skew(20deg,10deg); 
+    transform: skew(20deg,10deg); 
+}
+</style>
+
+
+<div id ="sesgar">
+div normal
+</div>
+
+<div id="myDivSes">
+div sesgado
+</div>
+
 <hr>
 <br>
 </div>
-<div id="preprocesador">
 
-<center> <h2>Preprocesadores de CSS </h2></center>
-
-<hr>
-</div>
 </section>
 <footer id="footer">
 

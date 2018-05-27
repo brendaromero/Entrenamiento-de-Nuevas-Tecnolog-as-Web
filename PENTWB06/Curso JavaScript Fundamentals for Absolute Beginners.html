@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title> JavaScript Fundamentals for Absolute Beginners</title>
+  
+<link rel="stylesheet" href="styles.css" type="text/css"  media="all">
+
+</head>
+
+<header id ="header"> 
+   <center id="center"> <h1>Curso JavaScript Fundamentals for Absolute Beginners</h1> </center>
+ 
+  <nav>
+      <ul id="contenido">
+		   <li><a href="#variables">Variables</a></li>
+		 	<li><a href="#datos">Tipos de datos </a></li>
+			<li><a href="#coercion">Tipo de coerción y conversión </a></li>
+			<li><a href="#operadores">Expresiones y operadores </a></li>
+			<li><a href="#arrays">Arrays </a></li>	
+			<li><a href="#funcion">Declaración de funciones </a></li>
+			<li><a href="#expresion"> Expresiones de funciones </a></li>		
+			<li><a href="#decision">Declaraciones de decisión</a></li>
+		    <li><a href="#iteracion">Declaraciones de iteración</a></li>
+			<li><a href="#string"> Métodos del String </a></li>
+			<li><a href="#metArr"> Métodos del Array </a></li>
+			<li><a href="#try"> Manejo de errores con Try Catch </a></li>
+			</ul>
+  </nav>
+  
+ </header>
+<body>
+<section>
+
+
+<div id="variables">
+<center> <h2>Variables </h2></center>
+
+let x = 7; <br>
+let y = 3; <br>
+let z = x + y; <br>
+
+let firstNumber = 7;<br>
+let secondNumber = 3;<br>
+let fistName = 'Gaby';<br>
+let zipCode = '54435';<br>
+
+<script>
+//let x;
+
+let x = 7;
+x = 6;
+x = 5;
+x= 4;
+let y = 3;
+let z = x + y;
+console.log("Imprimir valor de z: " + z);
+
+let firstNumber = 7;
+let secondNumber = 3;
+let fistName = 'Gaby';
+let zipCode = '54435';
+console.log("Imprimir valor de firstNumber: " + firstNumber);
+console.log("Imprimir valor de secondNumber: " + secondNumber);
+console.log("Imprimir valor de fistName: " + fistName);
+console.log("Imprimir valor de zipCode: " + zipCode);
+
+</script>
+<hr>
+</div>
+
+<div id="datos">
+<center> <h2>Tipos de datos </h2></center>
+let yy = true; // true o false <br>
+let zz = 'Hello world'; // texto <br>
+let az; <br>
+
+<script>
+let yy = true; // true o false (boolean)
+let zz = 'Hello world'; // String
+let aa;
+
+console.log(typeof yy);
+console.log(typeof zz);
+console.log(typeof aa);
+
+</script>
+<hr>
+<br>
+</div>
+
+<div id="coercion">
+<center> <h2>Tipo de coerción y conversión</h2></center>
+let a = 7; <br>
+let b = '6'; <br>
+let c = a + b; <br>
+
+b = parseInt(b,10);<br>
+
+let d = parseInt('gaby',10);<br>
+let e = isNaN(d); <br>
+
+<script>
+let a = 7;
+let b = '6';
+let c = a + b;
+b = parseInt(b,10);
+let d = parseInt('gaby',10);
+let e = isNaN(d);
+
+console.log("Imprime c: " + c);
+console.log("Imprime d: "+ d); 
+console.log("Imprime e: "+ e); 
+</script>
+<hr>
+</div>
+
+<div id="operadores">
+<center> <h2>Expresiones y operadores </h2></center>
+<h4>Declarar variables</h4><br>
+let aa;<br>
+<br>
+<h4>Asignar valores </h4>
+aa = 4;<br>
+
+<h4>Operadores</h4>
+Asignar =<br>
+Aritmetico + - * / %<br>
+var m = 10 % 3;<br>
+
+Incremento y decremento ++ --<br>
+
+var aaaa = 1;<br>
+aaaa++;<br>
+
+String '' + <br>
+
+<h4>Precedencia</h4><br>
+var bbb = 1 + 2 * 3;<br>
+
+Logicos and: && or:||<br>
+
+Operadores en bloque de código {}<br>
+
+Operadores de acceso a elementos de Array []<br>
+
+
+<script>
+let aaa;
+aaa = 4;
+
+var aaaa = 1;
+aaaa++;
+console.log ("Imprime aaaa: "+ aaaa);
+console.log (aaaa++);
+console.log ("Vuelve a imprimir aaaa: "+ aaaa);
+
+var m = 10 % 3;
+console.log ("Imprime m: "+ m);
+
+var bbb = 1 + 2 * 3;
+console.log ("Imprime bbb: "+ bbb);
+</script>
+<hr>
+<br>
+</div>
+
+<div id="arrays">
+<center> <h2>Arrays </h2></center>
+let arr = [4,8,15,16,23,42];<br>
+let arrb = ['david','gaby','jose','marin'];<br>
+let arrc = [4, 'alex', true];<br>
+arr.push(77);<br>
+
+<script>
+let arr = [4,8,15,16,23,42];
+let arrb = ['david','gaby','jose','marin'];
+
+console.log(arr[0]);
+console.log(arr);
+console.log(arr);
+console.log(typeof arr);
+
+let arrc = [4, 'alex', true];
+console.log(arrc);
+console.log(arrc.lenght);
+
+arr.push(77);
+console.log(arr);
+console.log(arr.lenght);
+
+arr.pop();
+
+
+
+</script>
+<hr>
+</div>
+
+<div id="funcion">
+<center> <h2>Declaración de funciones  </h2></center>
+function sayHello(){<br>
+console.log('...............');<br>
+console.log('hello!');<br>
+console.log('...............');<br>
+}<br><br>
+
+sayHello();<br>
+<br>
+let am = sayHello();<br><br>
+
+function hello(name){<br>
+console.log('...............');<br>
+console.log('hello!' + name);<br>
+console.log('...............');<br>
+<br>
+hello('gaby');<br>
+}<br><br>
+
+function calcular(amount){<br>
+let result = amount * .10 ;<br>
+return result;<br>
+}<br>
+<br>
+let tax = calcular(100);<br>
+<script>
+function sayHello(){
+console.log('...............');
+console.log('hello!');
+console.log('...............');
+
+}
+sayHello();
+
+let am = sayHello();
+
+function hello(name){
+console.log('...............');
+console.log('hello! ' + name + '');
+console.log('...............');
+}
+hello('gaby');
+
+function calcular(amount){
+let result = amount * .10 ;
+return result;
+}
+
+let tax = calcular(100);
+console.log(tax);
+</script>
+<hr>
+</div>
+
+<div id="exprecion">
+<center> <h2>Expresiones de funciones  </h2></center>
+setTimeout(function(){console.log('2 segundos')}, 2000);<br><br>
+
+let counter = 0;<br>
+<br>
+function timeout(){<br>
+setTimeout(function(){console.log('hello' + counter++); timeout();}, 2000);<br>
+}<br><br>
+
+timeout();<br>
+<script>
+setTimeout(function(){console.log('2 segundos')}, 2000);
+
+let counter = 0;
+
+function timeout(){
+setTimeout(function(){console.log('hello ' + counter++); timeout();}, 9000);
+}
+
+timeout();
+
+</script>
+<hr>
+</div>
+
+<div id= "decision">
+<center> <h2>Declaraciones de decisión </h2></center>
+var cantidad = 3;<br><br>
+if(cantidad == 4){<br>
+console.log("La cantidad es 4");<br>
+}<br>
+else if (cantidad > 4){<br>
+console.log("La cantidad es mayor a  4");<br>
+}<br>
+else if (cantidad < 4){<br>
+console.log("La cantidad es menor a  4");<br>
+}<br>
+else{<br>
+console.log("La cantidad NO es 4");<br>
+}<br>
+<br>
+<br>
+let hero = 'superman';<br>
+switch(hero){<br>
+case 'superman':<br>
+	console.log('Es superman');<br>
+case 'batman':<br>
+	console.log('Es batman');<br>
+default:<br>
+	console.log('Es otro heroe');<br>
+}<br>
+
+<h4>Operador ternario</h4>
+let at = 1,bt = '1';<br>
+let resultado = (at == bt) ? 'equal': 'inequal';<br>
+
+<script>
+var cantidad = 3;
+if(cantidad == 4){
+console.log("La cantidad es 4");
+}
+else if (cantidad > 4){
+console.log("La cantidad es mayor a  4");
+}
+else if (cantidad < 4){
+console.log("La cantidad es menor a  4");
+}
+else{
+console.log("La cantidad NO es 4");
+}
+
+
+let hero = 'spiderman';
+switch(hero){
+case 'superman':
+	console.log('Es superman');
+	break;
+case 'batman':
+	console.log('Es batman');
+	break;
+default:
+	console.log('Es otro heroe');
+}
+
+let at = 1,bt = '1';
+let resultado = (at == bt) ? 'equal': 'inequal';
+console.log(resultado);
+</script>
+<hr>
+</div>
+
+<div id ="iteracion">
+<center> <h2>Declaraciones de iteración  </h2></center>
+for (i = 0; i <10; 1++){<br>
+console.log(i);<br>
+}<br><br>
+
+let arrayA = [4,8,15,16,23,42];<br>
+for (i = 0; i < arrayA.length; i++){<br>
+console.log(arrayA[i]);<br>
+}<br>
+<script>
+for (i = 0; i < 10; i++){
+console.log('valor de i: '+ i);
+}
+
+let arrayA = [4,8,15,16,23,42];
+for (i = 0; i < arrayA.length; i++){
+console.log(arrayA[i]);
+}
+</script>
+<hr>
+</div>
+
+<div id="string">
+<center> <h2> Métodos de String   </h2></center>
+
+
+let uno ='Texto cualquiera';<br>
+let dos = 'Otro texto...';<br>
+let tres = '2,3,5,34,2,3';<br>
+<br>
+let mySplit = tres.split(' , ');<br>
+console.log(mySplit);<br><br>
+
+let mySlice = uno.slice(2,4);<br>
+console.log(mySlice);<br><br>
+
+let mySubs= dos.substr(2,4);<br>
+console.log(mySubs);<br>
+
+let myEnds= dos.endsWith('tex.');<br>
+console.log(myEnds);<br><br>
+
+let myStart= dos.startsWith('Otro');<br>
+console.log(myStart);<br>
+
+<hr>
+<script>
+let uno ='Texto cualquiera';
+let dos = 'Otro texto...';
+let tres = '2,3,5,34,2,3';
+
+let mySplit = tres.split('x ,x ');
+console.log(mySplit);
+
+let mySlice = uno.slice(2,5);
+console.log(mySlice);
+
+let mySubs= dos.substr(2,4);
+console.log(mySubs);
+
+let myEnds= dos.endsWith('tex.');
+console.log(myEnds);
+
+let myStart= dos.startsWith('Otro');
+console.log(myStart);
+</script>
+</div>
+<div id= "metArr">
+<center> <h2>Array Methods  </h2></center>
+let names = ['gaby','bren','marin','jose'];<br>
+let others = ['iveth', 'alfred', 'aldo'];<br>
+<br>
+let lost =[2,6,7,3,7,3,6,3,5,7];<br>
+let fibonacci= [1,1,2,3,5,8,13,21,34,55];<br><br>
+
+var combine = lost.concat(fibonacci);<br>
+console.log(combine);<br>
+console.log(fibonacci.join('~'));<br>
+console.log(lost.shift());<br><br>
+
+console.log(names);<br>
+console.log(names.reverse());<br>
+console.log(names.sort());<br>
+
+console.log(others.indexOf('iveth'));<br>
+console.log(combine.lastIndexOf(1));<br>
+
+
+<hr>
+<script>
+let names = ['gaby','bren','marin','jose'];
+let others = ['iveth', 'alfred', 'aldo'];
+
+let lost =[2,6,7,3,7,3,6,3,5,7];
+let fibonacci= [1,1,2,3,5,8,13,21,34,55];
+
+var combine = lost.concat(fibonacci);
+console.log(combine);
+
+console.log(fibonacci.join('~'));
+console.log(lost.shift());
+
+console.log(names);
+console.log(names.reverse());
+console.log(names.sort());
+
+console.log(others.indexOf('iveth'));
+console.log(combine.lastIndexOf(1));
+</script>
+</div>
+
+<div id ="try">
+<center> <h2> Manejo de errores con Try Catch    </h2></center>
+
+function beforeTryCatch(){ <br>
+let obj = undefined;<br>
+console.log(obj.b);<br>
+console.log('If the previous line of code throws an exception');<br>
+}
+<br><br>
+beforeTryCatch();<br>
+<br>
+function aftertryCatch(){<br>
+try{<br>
+let obj = undefined;<br>
+console.log(obj.b);<br>
+console.log('If the previous line of code throws an exception');<br>
+}catch (error){<br>
+console.log('I caught an exception '+ error.message);<br>
+}<br>
+console.log('My application is will running');<br>
+}
+<br>
+function performCalculation(obj){<br>
+if (!obj.hasOwnProperty('b')){<br>
+throw new Error('Object missing property');<br>
+}<br>
+return 6;<br>
+}<br><br>
+
+function performHigherLevelOperation(){<br>
+let obj= {};<br>
+let value = 0;<br>
+try{<br>
+ value = performCalculation(obj);<br><br>
+ 
+}catch(error){<br>
+console.log(error.message);<br>
+}<br>
+if(value == 0){<br>
+}<br>
+}<br><br>
+
+performHigherLevelOperation();<br>
+<hr>
+<script>
+function beforeTryCatch(){
+let obj = undefined;
+console.log(obj.b);
+console.log('If the previous line of code throws an exception');
+}
+
+beforeTryCatch();
+
+function aftertryCatch(){
+try{
+let obj = undefined;
+console.log(obj.b);
+console.log('If the previous line of code throws an exception');
+}catch (error){
+console.log('I caught an exception '+ error.message);
+}
+console.log('My application is will running');
+}
+
+function performCalculation(obj){
+if (!obj.hasOwnProperty('b')){
+throw new Error('Object missing property');
+}
+}
+
+function performCalculation(obj){
+if (!obj.hasOwnProperty('b')){
+throw new Error('Object missing property');
+}
+return 6;
+}
+
+function performHigherLevelOperation(){
+let obj = {};
+let value = 0;
+try{
+ value = performCalculation(obj);
+ 
+}catch(error){
+console.log(error.message);
+}
+if(value == 0){
+}
+}
+
+performHigherLevelOperation();
+</script>
+</div>
+
+</section>
+
+<footer id="footer">
+<small>Copyright © 2018 - Brenda Gabriela Romero Moreno - BGRM</small>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+using Xunit;
+
+namespace FibonacciTest
+{
+
+	[]references
+	public class FibonacciUnitTest
+	{
+		[Fact]
+		[]references
+		public void TestMethod1()
+		{
+		
+		}
+		
+		[Fact]
+		[]references
+		public void Fib_Given0_Return0()
+		{
+			//arrange
+			int n = 0;
+			
+			//act
+			int result = Fibonacci.Fib(n);
+			
+			//assert
+			Assert.Equal(0, result);
+		}
+		
+		[Fact]
+		
+		public void Fib_Given1_Return1()
+		{
+			//arrange
+			int n = 1;
+			
+			//act
+			int result = Fibonacci.Fib(n);
+			
+		}
+	}
+}

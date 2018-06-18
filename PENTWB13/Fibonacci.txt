@@ -1,0 +1,13 @@
+namespace FibonacciProject
+{
+
+	[]reference
+	public class Fibonacci
+	{
+		[]reference
+		public int Fib(int n)
+		{
+			return - 1;
+		}
+	}
+}
